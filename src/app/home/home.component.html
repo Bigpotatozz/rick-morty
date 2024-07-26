@@ -1,22 +1,26 @@
 
     <app-navbar></app-navbar>
-    <section class="card-section">
-        <app-card foto_personaje="https://github.com/Bigpotatozz.png"
-                    nombre_personaje="Bigpotatozz"
-                    descripcion_personaje="alch no se que poner" ></app-card>
 
-         <app-card foto_personaje="https://github.com/Bigpotatozz.png"
-                    nombre_personaje="Bigpotatozz"
-                    descripcion_personaje="alch no se que poner" ></app-card>
-        
-        <app-card foto_personaje="https://github.com/Bigpotatozz.png"
-                    nombre_personaje="Bigpotatozz"
-                    descripcion_personaje="alch no se que poner" ></app-card>
-
-        <app-card foto_personaje="https://github.com/Bigpotatozz.png"
-                    nombre_personaje="Bigpotatozz"
-                    descripcion_personaje="alch no se que poner" ></app-card>
-    </section>
+    @if (personaje) {
+        <section class="card-section">
+            <app-card [foto_personaje]="personaje[0].image || '' "
+                        [nombre_personaje]="personaje[0].name || '' "
+                        [descripcion_personaje]="personaje[0].species || '' " ></app-card>
+    
+             <app-card foto_personaje="https://github.com/Bigpotatozz.png"
+                        nombre_personaje="Bigpotatozz"
+                        descripcion_personaje="alch no se que poner" ></app-card>
+            
+            <app-card foto_personaje="https://github.com/Bigpotatozz.png"
+                        nombre_personaje="Bigpotatozz"
+                        descripcion_personaje="alch no se que poner" ></app-card>
+    
+            <app-card foto_personaje="https://github.com/Bigpotatozz.png"
+                        nombre_personaje="Bigpotatozz"
+                        descripcion_personaje="alch no se que poner" ></app-card>
+        </section>
+    }
+   
 
 
 
