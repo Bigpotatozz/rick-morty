@@ -3,21 +3,42 @@
 
     @if (personaje) {
         <section class="card-section">
-            <app-card [foto_personaje]="personaje[0].image || '' "
-                        [nombre_personaje]="personaje[0].name || '' "
-                        [descripcion_personaje]="personaje[0].species || '' " ></app-card>
-    
-             <app-card foto_personaje="https://github.com/Bigpotatozz.png"
-                        nombre_personaje="Bigpotatozz"
-                        descripcion_personaje="alch no se que poner" ></app-card>
+
+            @for (persona of personaje.slice(0,4); track persona.id; ) {
+        
+                <app-card [foto_personaje]=" persona.image"
+                [nombre_personaje]="persona.name"
+                [descripcion_personaje]="persona.species" ></app-card>
+
+            }
             
-            <app-card foto_personaje="https://github.com/Bigpotatozz.png"
-                        nombre_personaje="Bigpotatozz"
-                        descripcion_personaje="alch no se que poner" ></app-card>
-    
-            <app-card foto_personaje="https://github.com/Bigpotatozz.png"
-                        nombre_personaje="Bigpotatozz"
-                        descripcion_personaje="alch no se que poner" ></app-card>
+
+        </section>
+
+        <section class="card-section">
+
+            @for (persona of personaje.slice(5,9); track persona.id; ) {
+        
+                <app-card [foto_personaje]=" persona.image"
+                [nombre_personaje]="persona.name"
+                [descripcion_personaje]="persona.species" ></app-card>
+
+            }
+            
+
+        </section>
+
+        <section class="card-section">
+
+            @for (persona of personaje.slice(10,14); track persona.id; ) {
+        
+                <app-card [foto_personaje]=" persona.image"
+                [nombre_personaje]="persona.name"
+                [descripcion_personaje]="persona.species" ></app-card>
+
+            }
+            
+
         </section>
     }
    

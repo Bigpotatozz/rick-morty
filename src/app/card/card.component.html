@@ -1,6 +1,9 @@
 
-<div class="card-container">
-    <img [src] = "foto_personaje">
-    <h2>{{nombre_personaje}}</h2>
-    <p>{{descripcion_personaje}}</p>
-</div>
+<a [routerLink]="['/character']" class="clickCard">
+    <div class="card-container">
+        <img [src] = "foto_personaje">
+        <h2>{{nombre_personaje}}</h2>
+        <p>{{descripcion_personaje}}</p>
+    </div>
+</a>
+
